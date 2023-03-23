@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+:root {
+  --body_bg: #c5c5c5;
+  --primary: #8132a3;
+  --light: #eeeeee;
+  --white: #ffffff;
+  --black: #000000;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  background-color: var(--body_bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  background-color: var(--white);
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 2.5rem 1rem 1.5rem;
+  position: relative;
+  border-bottom-right-radius: 0.8rem;
+  border-bottom-left-radius: 0.8rem;
+}
+
+.card::before {
+  content: "";
+  width: 100%;
+  height: 1rem;
+  position: absolute;
+  top: -1rem;
+  left: 0;
+  background-color: var(--primary);
+  border-top-right-radius: 0.8rem;
+  border-top-left-radius: 0.8rem;
+}
+
+.image-box {
+  width: 12rem;
+  height: 12rem;
+  border-radius: 50%;
+  overflow: hidden;
+  outline: 3px solid var(--white);
+  box-shadow: 0 0 10px var(--body_bg);
+  margin-bottom: 1rem;
+}
+
+.image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.row {
+  width: 100%;
+  border-bottom: 1px solid var(--light);
+  padding: 0.5rem;
+}
+
+.row:nth-child(4) {
+  border-bottom: 0;
+}
+
+.row label {
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: capitalize;
+}
+
+.row p {
+  font-size: 14px;
+  font-weight: 500;
+}
